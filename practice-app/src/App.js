@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   document.addEventListener('contextmenu', preventRightClickSave);
+  // document.addEventListener('click', preventRightClickSave);
 
   function preventRightClickSave(event){
     event.preventDefault()
@@ -17,6 +18,9 @@ function App() {
         <h1>
           Hello World!
         </h1>
+        <button onClick={preventRightClickSave}>
+          Click me
+        </button>
       </div>
     </div>
   );
