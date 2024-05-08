@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  document.addEventListener('contextmenu', preventRightClickSave);
+
+  function preventRightClickSave(event){
+    event.preventDefault()
+    console.log("No right clicking allowed here bud")
+  }
+
+
   return (
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
